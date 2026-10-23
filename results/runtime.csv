@@ -1,0 +1,6 @@
+domain,preprocess_seconds,alternating_seconds,profile_full_seconds,profile_warm_seconds,zero_seconds,fusemap_seconds,search_speedup,complete_speedup
+Products,84,27,612,337,117,88,3.83,2.45
+Publications,102,22,438,251,98,104,2.41,1.71
+Music,56,16,355,201,76,54,3.72,2.34
+Games,39,11,231,136,48,36,3.78,2.33
+Companies,177,48,1284,704,201,149,4.72,2.7

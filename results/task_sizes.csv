@@ -1,0 +1,6 @@
+domain,left_rows_thousands,right_rows_thousands,edges_thousands,candidate_recall_percent
+Products,48,61,1420,99.1
+Publications,73,86,1780,99.7
+Music,31,39,810,99.3
+Games,19,26,530,99.5
+Companies,96,121,2940,98.8

@@ -1,0 +1,17 @@
+{
+  "candidate_outcomes_percent": {
+    "rejected_without_solve": 72,
+    "rejected_after_partial_refinement": 19,
+    "fully_evaluated": 9
+  },
+  "changed_component_solve_avoidance_percent": 86,
+  "products_search_seconds": {
+    "Profile-Full": 612,
+    "Profile-Warm": 337,
+    "Zero": 117,
+    "Initial-bound": 131,
+    "Row-only": 116,
+    "No-reset": 97,
+    "FuseMap": 88
+  }
+}

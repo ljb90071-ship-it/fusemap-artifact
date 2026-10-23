@@ -1,0 +1,7 @@
+domain,tasks,prep_s,alternating_search_s,alternating8_search_s,alternating8_complete_s,fuse_budget_s,alternating_time_completed_runs_median,alternating_time_schema_f1,alternating_time_entity_f1,alternating8_schema_f1,alternating8_entity_f1,fuse_schema_f1,fuse_entity_f1
+Products,12,84,27,185,269,88,3,88.0,83.1,88.1,83.3,91.5,86.7
+Publications,12,102,22,151,253,104,5,94.0,94.9,94.2,95.0,95.1,95.7
+Music,12,56,16,110,166,54,3,90.0,88.3,90.4,88.8,92.8,90.4
+Games,12,39,11,76,115,36,3,91.4,89.8,91.8,90.0,93.9,91.6
+Companies,12,177,48,331,508,149,3,84.6,79.3,85.5,80.4,88.7,81.6
+

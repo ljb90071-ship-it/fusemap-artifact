@@ -1,0 +1,7 @@
+method,schema_f1_percent,entity_f1_percent,joint_row_percent
+Duplicate-Driven,86.9,84.8,60.2
+PARIS-Table,88,84.9,60.8
+Magneto+Ditto,89.2,86.1,63.4
+Schema-agnostic Ditto,,87.3,
+FuseMap,92.4,89.2,68.5
+Gold-schema scorer,100,92,78.1

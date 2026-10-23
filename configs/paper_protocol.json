@@ -1,0 +1,85 @@
+{
+  "tasks": 60,
+  "domains": 5,
+  "tasks_per_domain": 12,
+  "ambiguity": {
+    "low": {
+      "renamed_percent": 0,
+      "distractors": 0,
+      "missing_percent": 5
+    },
+    "medium": {
+      "renamed_percent": 25,
+      "distractors": 2,
+      "missing_percent": 15
+    },
+    "high": {
+      "renamed_percent": 50,
+      "distractors": 4,
+      "missing_percent": 30
+    }
+  },
+  "retrieval_q": 20,
+  "column_embedding_candidates": 4,
+  "maximum_nonnull_candidates": 8,
+  "null_always_allowed": true,
+  "embedding_model": "all-mpnet-base-v2",
+  "values_per_column": 20,
+  "logistic_l2": 0.001,
+  "lambda_grid": [
+    0.5,
+    1,
+    2
+  ],
+  "tau_grid": [
+    0,
+    0.5,
+    1,
+    2
+  ],
+  "selected_lambda": 1,
+  "selected_tau": 0.5,
+  "integer_cache_multiplier": 10000,
+  "timing_aggregation": "median of five executions; preprocessing and search separated; final decoding included; offline training excluded",
+  "null_metadata_score": 0,
+  "dominant_type_agreement_minimum": 0.9,
+  "text_distribution_cosine_minimum": 0.2,
+  "numeric_date_filter": "overlapping normalized interquartile intervals",
+  "training_row_pairs_per_domain": 12000,
+  "training_field_pairs_per_domain": 24000,
+  "validation_row_pairs_per_domain": 3000,
+  "training_templates_per_domain": 2,
+  "validation_templates_per_domain": 1,
+  "test_templates_per_domain": 4,
+  "row_count_aggregation": "median over 12 tasks per domain",
+  "f1_aggregation": "per-task F1 then domain mean then equally weighted domain macro",
+  "common_score_final_decoder": "same fresh deterministic decoder for every common-score method; once at completion for ordinary methods, each improved output checkpoint for Alternating-Time",
+  "gold_schema_reference": {
+    "mapping": "all gold pairs and null",
+    "missing_column_pairs": "add compatibility vectors with unchanged frozen scorer on original E",
+    "row_graph": "unchanged",
+    "training": "unchanged",
+    "extra_cache_cost": "excluded from common-score runtime comparison"
+  },
+  "column_coverage_denominator": "non-null gold column pairs across four tasks per domain per ambiguity level; null excluded",
+  "alternating_restarts": {
+    "starts": 8,
+    "first": "maximum S with lexicographic ties",
+    "later": "maximize S minus mean fraction of role agreements with previous starts, including null; exclude previous starts",
+    "penalty_normalized_metadata_units": 1,
+    "penalty_quantized_units": 10000,
+    "selection": "largest original joint endpoint objective; earlier endpoint wins ties",
+    "cache": "shared, solver state reset per restart"
+  },
+  "alternating_time": {
+    "budget": "per-task median FuseMap search time over five completed executions including final decoding",
+    "trials": 5,
+    "output": "best fully converged restart endpoint checkpoint whose common fresh decoding finishes before deadline",
+    "charged": "start generation, updates, incomplete work, every checkpoint decode",
+    "deadline": "cancel outstanding work; return previous complete checkpoint",
+    "f1": "average timed trials within each task, then tasks within domain, then equally weighted domains",
+    "completed_runs": "median trials per task then median tasks per domain",
+    "first_checkpoint": "completes within budget in all primary tasks",
+    "scope": "descriptive experimental protocol; wall-clock execution not implemented by the small reference"
+  }
+}
